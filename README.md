@@ -1,38 +1,11 @@
-# E-commerce Data Pipeline
+## Features
 
-## Overview
+- **End-to-end batch pipeline**: ingest → transform → validate → load.
+- **Star schema**: `fact_orders` + `dim_customers` + `dim_products`.
+- **Configurable database**: defaults to local SQLite (`warehouse.db`) but can be switched to any SQL database by setting `DB_URL` in a `.env` file.
+- **Structured logging**: all steps log to both console and `logs/pipeline.log`.
+- **Data quality checks**:
+  - No null or duplicate `order_id`
+  - No non-positive quantities or unit prices
+- **Tests**: pytest tests for transformation logic and data quality validation.
 
-This project is a simple end-to-end batch data pipeline:
-
-- Ingests raw e-commerce orders from a CSV file
-- Cleans and transforms the data with Python (pandas)
-- Loads the data into a SQLite database (data warehouse)
-- Runs SQL analytics (top products, monthly revenue, etc.)
-- Includes basic tests for transformation logic
-
-## Architecture
-
-- **Ingestion**: read `data/raw/orders_raw.csv` with pandas
-- **Transformations**: clean data, remove duplicates, create `total_amount`
-- **Warehouse**: SQLite database file `warehouse.db`
-- **Orchestration**: `src/main.py` calls the full pipeline
-- **Testing**: pytest in `tests/`
-
-## Data Model (simplified)
-
-- `fact_orders(order_id, customer_id, product_id, order_date, quantity, unit_price, total_amount)`
-
-## How to run
-
-```bash
-python -m venv venv
-# Windows: venv\Scripts\activate
-# Mac/Linux: source venv/bin/activate
-
-pip install -r requirements.txt
-
-# Run the pipeline
-python -m src.main
-
-# Run tests
-pytest

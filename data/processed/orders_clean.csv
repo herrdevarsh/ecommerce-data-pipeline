@@ -1,6 +1,6 @@
-order_id,customer_id,product_id,order_date,quantity,unit_price,total_amount,order_year,order_month
-1,10,100,2024-01-01,2,5.0,10.0,2024,1
-2,11,101,2024-01-02,1,15.0,15.0,2024,1
-3,10,100,2024-02-15,3,5.0,15.0,2024,2
-4,12,102,2024-03-10,5,8.0,40.0,2024,3
-5,13,103,2024-03-11,2,20.0,40.0,2024,3
+order_id,customer_id,customer_name,country,product_id,product_name,category,order_date,quantity,unit_price,total_amount,order_year,order_month
+1,10,Alice,Germany,100,USB Cable,Electronics,2024-01-01,2,5.0,10.0,2024,1
+2,11,Bob,France,101,Wireless Mouse,Electronics,2024-01-02,1,15.0,15.0,2024,1
+3,10,Alice,Germany,100,USB Cable,Electronics,2024-02-15,3,5.0,15.0,2024,2
+4,12,Charlie,Spain,102,Notebook,Stationery,2024-03-10,5,8.0,40.0,2024,3
+5,13,Diana,Italy,103,Headphones,Electronics,2024-03-11,2,20.0,40.0,2024,3
