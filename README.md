@@ -1,6 +1,9 @@
-## Usage
+## Continuous Integration
 
-### Full pipeline run
+This repository uses **GitHub Actions** to run the test suite on every push and pull request.
 
-```bash
-python -m src.main
+Workflow:
+- Install dependencies from `requirements.txt`
+- Run `python -m pytest`
+
+You can see the latest build status in the **Actions** tab on GitHub.
