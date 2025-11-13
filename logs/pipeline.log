@@ -110,3 +110,56 @@
 2025-11-13 15:09:45,714 | src.transformations.data_quality | INFO | Data quality summary: rows=5, columns=13, issues=0
 2025-11-13 15:09:45,715 | src.orchestration.pipeline | INFO | Data quality checks passed.
 2025-11-13 15:09:45,716 | src.orchestration.pipeline | INFO | Dry-run mode: skipping file save and database load. Pipeline stops after validation.
+2025-11-13 15:20:20,502 | __main__ | INFO | Starting pipeline (dry_run=True)
+2025-11-13 15:20:20,502 | src.orchestration.pipeline | INFO | Step 1: Loading raw orders...
+2025-11-13 15:20:20,504 | src.orchestration.pipeline | INFO | Loaded 5 raw rows.
+2025-11-13 15:20:20,504 | src.orchestration.pipeline | INFO | Step 2: Transforming orders...
+2025-11-13 15:20:20,515 | src.orchestration.pipeline | INFO | Transformed to 5 clean rows.
+2025-11-13 15:20:20,516 | src.orchestration.pipeline | INFO | Step 3: Running data quality checks...
+2025-11-13 15:20:20,517 | src.transformations.data_quality | INFO | Data quality summary: rows=5, columns=13, issues=0
+2025-11-13 15:20:20,518 | src.orchestration.pipeline | INFO | Data quality checks passed.
+2025-11-13 15:20:20,519 | src.orchestration.pipeline | INFO | Dry-run mode: skipping file save and database load. Pipeline stops after validation.
+2025-11-13 15:20:20,521 | src.orchestration.pipeline | INFO | Wrote run summary to C:\Users\devra\ecommerce-data-pipeline\logs\run_summary.json
+2025-11-13 15:21:04,207 | __main__ | INFO | Starting pipeline (dry_run=False)
+2025-11-13 15:21:04,208 | src.orchestration.pipeline | INFO | Step 1: Loading raw orders...
+2025-11-13 15:21:04,214 | src.orchestration.pipeline | INFO | Loaded 5 raw rows.
+2025-11-13 15:21:04,227 | src.orchestration.pipeline | INFO | Step 2: Transforming orders...
+2025-11-13 15:21:04,237 | src.orchestration.pipeline | INFO | Transformed to 5 clean rows.
+2025-11-13 15:21:04,237 | src.orchestration.pipeline | INFO | Step 3: Running data quality checks...
+2025-11-13 15:21:04,238 | src.transformations.data_quality | INFO | Data quality summary: rows=5, columns=13, issues=0
+2025-11-13 15:21:04,239 | src.orchestration.pipeline | INFO | Data quality checks passed.
+2025-11-13 15:21:04,239 | src.orchestration.pipeline | INFO | Step 4: Saving processed CSV...
+2025-11-13 15:21:04,243 | src.orchestration.pipeline | INFO | Saved processed data to C:\Users\devra\ecommerce-data-pipeline\data\processed\orders_clean.csv
+2025-11-13 15:21:04,243 | src.orchestration.pipeline | INFO | Step 5: Creating schema...
+2025-11-13 15:21:04,267 | src.orchestration.pipeline | INFO | Schema created (if not already present).
+2025-11-13 15:21:04,268 | src.orchestration.pipeline | INFO | Step 6: Loading dimension tables...
+2025-11-13 15:21:04,315 | src.orchestration.pipeline | INFO | Loaded dim_customers and dim_products.
+2025-11-13 15:21:04,316 | src.orchestration.pipeline | INFO | Step 7: Loading fact_orders table...
+2025-11-13 15:21:04,333 | src.orchestration.pipeline | INFO | Loaded fact_orders.
+2025-11-13 15:21:04,333 | src.orchestration.pipeline | INFO | Table dim_customers row count: 4
+2025-11-13 15:21:04,333 | src.orchestration.pipeline | INFO | Table dim_products row count: 4
+2025-11-13 15:21:04,333 | src.orchestration.pipeline | INFO | Table fact_orders row count: 5
+2025-11-13 15:21:04,333 | src.orchestration.pipeline | INFO | Wrote run summary to C:\Users\devra\ecommerce-data-pipeline\logs\run_summary.json
+2025-11-13 15:21:04,344 | src.orchestration.pipeline | INFO | Pipeline completed successfully.
+2025-11-13 15:21:39,812 | __main__ | INFO | Starting pipeline (dry_run=True)
+2025-11-13 15:21:39,812 | src.orchestration.pipeline | INFO | Step 1: Loading raw orders...
+2025-11-13 15:21:39,818 | src.orchestration.pipeline | INFO | Loaded 5 raw rows.
+2025-11-13 15:21:39,818 | src.orchestration.pipeline | INFO | Step 2: Transforming orders...
+2025-11-13 15:21:39,824 | src.orchestration.pipeline | INFO | Transformed to 5 clean rows.
+2025-11-13 15:21:39,825 | src.orchestration.pipeline | INFO | Step 3: Running data quality checks...
+2025-11-13 15:21:39,827 | src.transformations.data_quality | INFO | Data quality summary: rows=5, columns=13, issues=0
+2025-11-13 15:21:39,827 | src.orchestration.pipeline | INFO | Data quality checks passed.
+2025-11-13 15:21:39,827 | src.orchestration.pipeline | INFO | Dry-run mode: skipping file save and database load. Pipeline stops after validation.
+2025-11-13 15:21:39,827 | src.orchestration.pipeline | INFO | Wrote run summary to C:\Users\devra\ecommerce-data-pipeline\logs\run_summary.json
+2025-11-13 15:21:47,158 | src.transformations.data_quality | INFO | Data quality summary: rows=1, columns=7, issues=0
+2025-11-13 15:21:47,161 | src.transformations.data_quality | INFO | Data quality summary: rows=1, columns=7, issues=1
+2025-11-13 15:21:47,161 | src.transformations.data_quality | ERROR | Data quality issue: 1 rows with non-positive quantity
+2025-11-13 15:21:47,165 | src.orchestration.pipeline | INFO | Step 1: Loading raw orders...
+2025-11-13 15:21:47,168 | src.orchestration.pipeline | INFO | Loaded 5 raw rows.
+2025-11-13 15:21:47,168 | src.orchestration.pipeline | INFO | Step 2: Transforming orders...
+2025-11-13 15:21:47,172 | src.orchestration.pipeline | INFO | Transformed to 5 clean rows.
+2025-11-13 15:21:47,172 | src.orchestration.pipeline | INFO | Step 3: Running data quality checks...
+2025-11-13 15:21:47,173 | src.transformations.data_quality | INFO | Data quality summary: rows=5, columns=13, issues=0
+2025-11-13 15:21:47,173 | src.orchestration.pipeline | INFO | Data quality checks passed.
+2025-11-13 15:21:47,173 | src.orchestration.pipeline | INFO | Dry-run mode: skipping file save and database load. Pipeline stops after validation.
+2025-11-13 15:21:47,178 | src.orchestration.pipeline | INFO | Wrote run summary to C:\Users\devra\ecommerce-data-pipeline\logs\run_summary.json

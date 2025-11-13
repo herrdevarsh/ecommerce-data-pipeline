@@ -31,7 +31,6 @@ def get_logger(name: str) -> logging.Logger:
     file_handler.setFormatter(formatter)
     logger.addHandler(file_handler)
 
-    # Don't propagate to root logger
     logger.propagate = False
 
     return logger

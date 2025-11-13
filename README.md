@@ -1,6 +1,6 @@
 ## Usage
 
-Activate the virtual environment and install dependencies:
+### Full pipeline run
 
 ```bash
-pip install -r requirements.txt
+python -m src.main

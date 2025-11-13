@@ -4,3 +4,4 @@ __pycache__/
 *.db
 .env
 .ipynb_checkpoints/
+logs/
