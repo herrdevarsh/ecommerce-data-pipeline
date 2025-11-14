@@ -20,3 +20,6 @@ DB_URL = os.getenv("DB_URL", f"sqlite:///{DB_PATH}")
 
 # Logs directory
 LOGS_DIR = BASE_DIR / "logs"
+
+# Reports directory
+REPORTS_DIR = BASE_DIR / "reports"
